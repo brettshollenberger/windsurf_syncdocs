@@ -19,7 +19,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "sync-directory": "^3.1.0",
-    "yaml": "^2.3.4"
+    "sync-directory": "^6.0.5",
+    "yaml": "^2.7.0"
   }
 }
