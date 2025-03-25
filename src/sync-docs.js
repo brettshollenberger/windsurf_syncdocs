@@ -7,17 +7,17 @@ import fs from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const projectRoot = path.resolve(__dirname, "..");
 
 // Read and parse the config file
-const configPath = path.join(projectRoot, ".syncdocs.yaml");
+const userProjectRoot = process.cwd();
+const configPath = path.join(userProjectRoot, ".syncdocs.yaml");
 const configFile = fs.readFileSync(configPath, "utf8");
 const config = yaml.parse(configFile);
 
 // Process each sync configuration
 config.syncs.forEach(({ name, source, target, options }) => {
-  const sourcePath = path.join(projectRoot, source);
-  const targetPath = path.join(projectRoot, target);
+  const sourcePath = path.join(userProjectRoot, source);
+  const targetPath = path.join(userProjectRoot, target);
 
   console.log(`\nSyncing ${name}...`);
   console.log("Source:", sourcePath);
