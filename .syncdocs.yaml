@@ -1,0 +1,12 @@
+# Docs sync configuration
+syncs:
+  - name: hogbase
+    source: node_modules/hogbase/docs
+    target: docs/hogbase
+    options:
+      deleteOrphaned: true
+      type: copy
+      watch: false # Set to true for development mode
+      logging:
+        beforeSync: Starting docs sync...
+        afterSync: Docs sync complete!
