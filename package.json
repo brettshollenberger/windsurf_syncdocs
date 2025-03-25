@@ -9,6 +9,7 @@
   },
   "scripts": {
     "syncdocs": "node ./bin/syncdocs.js",
+    "postinstall": "npm run syncdocs",
     "release": "./release.sh"
   },
   "keywords": [
