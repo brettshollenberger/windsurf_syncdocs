@@ -1,6 +1,6 @@
 {
   "name": "windsurf-syncdocs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sync custom documentation into Windsurf IDE",
   "type": "module",
   "main": "src/sync-docs.js",
